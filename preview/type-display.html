@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Display — Dosis" subtitle="Headlines 700 Bold, −0.01em tracking" viewport="700x260" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Display Type — Dosis</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .display-sample {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #1d1d1d;
+  }
+  .meta-row { display: flex; gap: 16px; font-family: var(--font-body); font-size: 12px; color: var(--fg-muted); }
+  .meta-row span { font-weight: 600; }
+  .weights { display: flex; gap: 24px; align-items: baseline; }
+  .weight { font-family: var(--font-display); font-size: 28px; color: #1d1d1d; letter-spacing: -0.01em; }
+  .weight small { font-family: var(--font-body); font-size: 10px; color: var(--fg-subtle); display:block; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="display-sample">Alltagshilfe<br>für alle.</div>
+  <div class="meta-row">
+    <span>Dosis</span><span>700 Bold</span><span>72/1.05</span><span>−0.01em</span>
+  </div>
+  <div class="divider"></div>
+  <div class="weights">
+    <div class="weight" style="font-weight:400">Aa <small>400</small></div>
+    <div class="weight" style="font-weight:500">Aa <small>500</small></div>
+    <div class="weight" style="font-weight:600">Aa <small>600</small></div>
+    <div class="weight" style="font-weight:700">Aa <small>700</small></div>
+  </div>
+</div>
+</body>
+</html>

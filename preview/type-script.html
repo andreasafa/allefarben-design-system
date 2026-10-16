@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Script Accent" subtitle="Caveat — the handwritten accent for 'Alltagshilfe'" viewport="700x290" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Script Accent — Caveat</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .row-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
+  .allfarben {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 56px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+  .allfarben .a1 { color: #1d1d1d; }
+  .allfarben .a2 { color: #e39f9a; }
+  .allfarben .a3 { color: #f4b896; }
+  .allfarben .a4 { color: #ffe28d; }
+  .allfarben .a5 { color: #98d7c2; }
+  .allfarben .a6 { color: #78a5dc; }
+  .allfarben .a7 { color: #b89bca; }
+  .script-word {
+    font-family: var(--font-script);
+    font-weight: 700;
+    font-size: 44px;
+    color: #1d1d1d;
+    line-height: 1;
+    margin-top: 4px;
+  }
+  .flag {
+    background: #fef3e8;
+    border: 1px solid #ecdfce;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #4a4846;
+    line-height: 1.4;
+  }
+  .flag strong { color: #1d1d1d; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row-stack">
+    <div class="allfarben">
+      <span class="a1">ALLE</span> <span class="a2">F</span><span class="a3">A</span><span class="a4">R</span><span class="a5">B</span><span class="a6">E</span><span class="a7">N</span>
+    </div>
+    <div class="script-word">Alltagshilfe</div>
+  </div>
+  <div class="flag">
+    <strong>Einsatz:</strong> Caveat ist self-hosted (<code>fonts/Caveat-VariableFont_wght.ttf</code>). Überall wo die handschriftliche Stimme gebraucht wird — „Alltagshilfe", persönliche Notizen, Claim-Zusätze — immer Caveat, nie ein System-Fallback. Sparsam: 1–2 Wörter, nie Fließtext.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Spacing Scale" subtitle="4px base · 12-step scale" viewport="700x300" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Spacing Scale</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .scale { display: flex; flex-direction: column; gap: 6px; }
+  .row-sp { display: flex; align-items: center; gap: 14px; font-family: var(--font-body); }
+  .token { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-subtle); width: 40px; }
+  .value { font-size: 12px; color: var(--fg-muted); width: 48px; }
+  .bar { background: var(--brand-yellow); height: 14px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="scale">
+    <div class="row-sp"><span class="token">sp-1</span><span class="value">4px</span><span class="bar" style="width:4px"></span></div>
+    <div class="row-sp"><span class="token">sp-2</span><span class="value">8px</span><span class="bar" style="width:8px"></span></div>
+    <div class="row-sp"><span class="token">sp-3</span><span class="value">12px</span><span class="bar" style="width:12px"></span></div>
+    <div class="row-sp"><span class="token">sp-4</span><span class="value">16px</span><span class="bar" style="width:16px"></span></div>
+    <div class="row-sp"><span class="token">sp-5</span><span class="value">20px</span><span class="bar" style="width:20px"></span></div>
+    <div class="row-sp"><span class="token">sp-6</span><span class="value">24px</span><span class="bar" style="width:24px"></span></div>
+    <div class="row-sp"><span class="token">sp-8</span><span class="value">32px</span><span class="bar" style="width:32px"></span></div>
+    <div class="row-sp"><span class="token">sp-10</span><span class="value">40px</span><span class="bar" style="width:40px"></span></div>
+    <div class="row-sp"><span class="token">sp-12</span><span class="value">48px</span><span class="bar" style="width:48px"></span></div>
+    <div class="row-sp"><span class="token">sp-16</span><span class="value">64px</span><span class="bar" style="width:64px"></span></div>
+    <div class="row-sp"><span class="token">sp-20</span><span class="value">80px</span><span class="bar" style="width:80px"></span></div>
+    <div class="row-sp"><span class="token">sp-24</span><span class="value">96px</span><span class="bar" style="width:96px"></span></div>
+  </div>
+</div>
+</body>
+</html>

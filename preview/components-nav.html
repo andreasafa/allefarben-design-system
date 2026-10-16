@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Navigation" subtitle="Translucent sticky nav with rainbow underline" viewport="700x130" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Navigation</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { background: #fffaf6; }
+  .nav {
+    background: rgba(255, 250, 246, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ecdfce;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .nav::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: var(--gradient-rainbow);
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-mark { width: 26px; height: 26px; }
+  .logo .a1 { color: #1d1d1d; }
+  .logo .a2 { color: #e39f9a; }
+  .logo .a3 { color: #f4b896; }
+  .logo .a4 { color: #ffe28d; }
+  .logo .a5 { color: #98d7c2; }
+  .logo .a6 { color: #78a5dc; }
+  .logo .a7 { color: #b89bca; }
+  .links { display: flex; gap: 22px; font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+  .links a { text-decoration: none; color: #1d1d1d; position: relative; padding-bottom: 2px; }
+  .links a.active { text-decoration: underline; text-decoration-color: #ffe28d; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+  .cta {
+    font-family: var(--font-display);
+    font-weight: 700;
+    background: #ffe28d;
+    color: #1d1d1d;
+    border: none;
+    border-radius: 999px;
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="nav">
+    <div class="logo">
+      <img class="logo-mark" src="../assets/logo-square.png" alt="">
+      <span><span class="a1">ALLE</span> <span class="a2">F</span><span class="a3">A</span><span class="a4">R</span><span class="a5">B</span><span class="a6">E</span><span class="a7">N</span></span>
+    </div>
+    <nav class="links">
+      <a href="#" class="active">Start</a>
+      <a href="#">Leistungen</a>
+      <a href="#">Über uns</a>
+      <a href="#">Jobs</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <button class="cta">Termin buchen</button>
+  </div>
+</div>
+</body>
+</html>

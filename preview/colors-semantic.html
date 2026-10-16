@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Semantic Colors" subtitle="Success / Info / Warning / Danger, softened toward pastel" viewport="700x200" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Semantic Colors</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .sem {
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 92px;
+    justify-content: space-between;
+  }
+  .sem .dot { width: 14px; height: 14px; border-radius: 50%; }
+  .sem .name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: #1d1d1d; }
+  .sem .hex { font-size: 11px; font-weight: 600; color: #1d1d1d; opacity: 0.7; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid4">
+    <div class="sem" style="background:#e4f2ea">
+      <div class="dot" style="background:#6eb89c"></div>
+      <div><div class="name">Success</div><div class="hex">#6EB89C</div></div>
+    </div>
+    <div class="sem" style="background:#e3ecf7">
+      <div class="dot" style="background:#5e91cf"></div>
+      <div><div class="name">Info</div><div class="hex">#5E91CF</div></div>
+    </div>
+    <div class="sem" style="background:#fbe9d4">
+      <div class="dot" style="background:#e8a35a"></div>
+      <div><div class="name">Warning</div><div class="hex">#E8A35A</div></div>
+    </div>
+    <div class="sem" style="background:#f7dedc">
+      <div class="dot" style="background:#c96e68"></div>
+      <div><div class="name">Danger</div><div class="hex">#C96E68</div></div>
+    </div>
+  </div>
+  <div class="label">Softened toward pastel — no harsh reds or neon greens</div>
+</div>
+</body>
+</html>

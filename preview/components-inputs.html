@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Form Inputs" subtitle="Default / focus / error with blue focus ring" viewport="700x240" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Form Inputs</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-family: var(--font-body); font-size: 12px; font-weight: 700; color: #1d1d1d; }
+  .input {
+    font-family: var(--font-body);
+    font-size: 15px;
+    background: #fffdfa;
+    border: 1.5px solid #ecdfce;
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: #1d1d1d;
+    outline: none;
+    transition: all 200ms;
+  }
+  .input::placeholder { color: #a89b8d; }
+  .input.focus { border-color: #78a5dc; box-shadow: 0 0 0 3px #78a5dc33; }
+  .input.error { border-color: #c96e68; box-shadow: 0 0 0 3px #c96e6826; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .help { font-family: var(--font-body); font-size: 11px; color: var(--fg-subtle); }
+  .help.err { color: #c96e68; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row2">
+    <div class="field">
+      <label>Dein Name</label>
+      <input class="input" placeholder="Vor- und Nachname" value="Alex Schmidt">
+      <span class="help">So sprechen wir dich an.</span>
+    </div>
+    <div class="field">
+      <label>E-Mail</label>
+      <input class="input focus" placeholder="du@example.de" value="alex@">
+      <span class="help">Fokus-Ring in Brand-Blau.</span>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="field">
+      <label>Telefon</label>
+      <input class="input error" value="030 ">
+      <span class="help err">Bitte gib eine vollständige Nummer ein.</span>
+    </div>
+    <div class="field">
+      <label>Was brauchst du?</label>
+      <input class="input" placeholder="z.B. Haushalt, Begleitung…">
+      <span class="help">Du kannst auch mehrere wählen.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

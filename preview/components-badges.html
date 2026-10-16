@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Badges & Pills" subtitle="Pastel category pills + status chips" viewport="700x170" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Badges & Pills</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .pill {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .p-yellow { background: #ffe28d; color: #1d1d1d; }
+  .p-mint { background: #98d7c2; color: #1d1d1d; }
+  .p-peach { background: #f4b896; color: #1d1d1d; }
+  .p-blue { background: #78a5dc; color: #1d1d1d; }
+  .p-lav { background: #b89bca; color: #1d1d1d; }
+  .p-ghost { background: #fef3e8; color: #1d1d1d; }
+  .p-outline { background: transparent; color: #1d1d1d; box-shadow: inset 0 0 0 1.5px #1d1d1d; }
+  .p-status-ok { background: #e4f2ea; color: #2d6b51; }
+  .p-status-warn { background: #fbe9d4; color: #7a4e1f; }
+  .p-status-info { background: #e3ecf7; color: #2a507a; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <span class="pill p-yellow">Neu</span>
+    <span class="pill p-mint">Verfügbar</span>
+    <span class="pill p-peach">Haushalt</span>
+    <span class="pill p-blue">Begleitung</span>
+    <span class="pill p-lav">Pflegefachwissen</span>
+  </div>
+  <div class="row">
+    <span class="pill p-ghost">Ghost</span>
+    <span class="pill p-outline">Outline</span>
+    <span class="pill p-status-ok"><span class="dot" style="background:#6eb89c"></span> Aktiv</span>
+    <span class="pill p-status-warn"><span class="dot" style="background:#e8a35a"></span> Warteliste</span>
+    <span class="pill p-status-info"><span class="dot" style="background:#5e91cf"></span> Info</span>
+  </div>
+</div>
+</body>
+</html>

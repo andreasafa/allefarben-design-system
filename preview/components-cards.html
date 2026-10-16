@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Cards" subtitle="Rainbow-top card + editorial outlined card" viewport="700x220" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Cards</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .c {
+    background: #fffdfa;
+    border-radius: 20px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 18px rgba(77,54,30,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 150px;
+  }
+  .c-title { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: #1d1d1d; letter-spacing: -0.01em; }
+  .c-body { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: #4a4846; }
+  .c-editorial {
+    background: #fffdfa;
+    border: 1.5px solid #1d1d1d;
+    box-shadow: 6px 6px 0 0 #1d1d1d;
+  }
+  .c-rainbow-top {
+    position: relative;
+    overflow: hidden;
+  }
+  .c-rainbow-top::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: var(--gradient-rainbow);
+  }
+  .c .pillrow { display: flex; gap: 6px; margin-top: auto; }
+  .pill {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    background: #fef3e8;
+    color: #1d1d1d;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row2">
+    <div class="c c-rainbow-top">
+      <div class="c-title">Haushalt</div>
+      <div class="c-body">Putzen, Einkaufen, Wäsche — im Tempo, das für dich passt.</div>
+      <div class="pillrow"><span class="pill">ab 18 €/h</span><span class="pill">flexibel</span></div>
+    </div>
+    <div class="c c-editorial">
+      <div class="c-title">Begleitung</div>
+      <div class="c-body">Zum Amt, zum Arzt, zum Späti. Du gehst nicht allein.</div>
+      <div class="pillrow"><span class="pill">Berlin-weit</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

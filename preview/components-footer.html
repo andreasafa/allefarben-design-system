@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Footer" subtitle="Dark surface, rainbow top edge, script claim" viewport="700x210" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Footer</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .footer {
+    background: #1d1d1d;
+    color: #fffaf6;
+    padding: 22px 24px;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--gradient-rainbow);
+  }
+  .f-brand { display: flex; flex-direction: column; gap: 6px; }
+  .f-brand .wordmark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  .f-brand .a1 { color: #fffaf6; }
+  .f-brand .a2 { color: #e39f9a; }
+  .f-brand .a3 { color: #f4b896; }
+  .f-brand .a4 { color: #ffe28d; }
+  .f-brand .a5 { color: #98d7c2; }
+  .f-brand .a6 { color: #78a5dc; }
+  .f-brand .a7 { color: #b89bca; }
+  .claim { font-family: var(--font-script); font-size: 18px; color: #ffe28d; }
+  h5 { font-family: var(--font-display); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #fffaf6aa; margin-bottom: 8px; font-weight: 700; }
+  ul { list-style: none; }
+  li { font-family: var(--font-body); font-size: 13px; line-height: 1.9; color: #fffaf6; }
+  .meta { font-family: var(--font-body); font-size: 11px; color: #fffaf666; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="footer">
+    <div class="f-brand">
+      <div class="wordmark"><span class="a1">ALLE</span> <span class="a2">F</span><span class="a3">A</span><span class="a4">R</span><span class="a5">B</span><span class="a6">E</span><span class="a7">N</span></div>
+      <div class="claim">Für alle, die Vielfalt l(i)eben!</div>
+      <div class="meta">Friedrichshain, Berlin</div>
+    </div>
+    <div>
+      <h5>Leistungen</h5>
+      <ul><li>Haushalt</li><li>Begleitung</li><li>Pflegefachwissen</li></ul>
+    </div>
+    <div>
+      <h5>Über uns</h5>
+      <ul><li>Team</li><li>Jobs</li><li>Presse</li></ul>
+    </div>
+    <div>
+      <h5>Kontakt</h5>
+      <ul><li>030 1234 5678</li><li>hallo@allefarben.de</li></ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

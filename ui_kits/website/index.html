@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Website" name="Website UI Kit" subtitle="Full marketing page recreation — hero, services, founder, testimonial, CTA, footer + booking sheet" viewport="1280x900" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlleFarben Alltagshilfe — UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fffaf6; }
+  * { box-sizing: border-box; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel" src="./Primitives.jsx"></script>
+<script type="text/babel" src="./Navbar.jsx"></script>
+<script type="text/babel" src="./Hero.jsx"></script>
+<script type="text/babel" src="./ServiceCards.jsx"></script>
+<script type="text/babel" src="./FounderBlock.jsx"></script>
+<script type="text/babel" src="./Testimonial.jsx"></script>
+<script type="text/babel" src="./CTABlock.jsx"></script>
+<script type="text/babel" src="./Footer.jsx"></script>
+<script type="text/babel" src="./BookingSheet.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+function App() {
+  const [active, setActive] = useState("start");
+  const [bookingOpen, setBookingOpen] = useState(false);
+
+  const handleNav = (id) => {
+    setActive(id);
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
+  };
+
+  return (
+    <div data-screen-label="Homepage">
+      <Navbar active={active} onNav={handleNav} onBook={() => setBookingOpen(true)} />
+      <div id="start"><Hero onBook={() => setBookingOpen(true)} /></div>
+      <ServiceCards />
+      <FounderBlock />
+      <Testimonial />
+      <div id="kontakt"><CTABlock onBook={() => setBookingOpen(true)} /></div>
+      <Footer />
+      <BookingSheet open={bookingOpen} onClose={() => setBookingOpen(false)} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+</script>
+</body>
+</html>

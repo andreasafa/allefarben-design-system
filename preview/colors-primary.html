@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Primary Yellow" subtitle="#FFE28D — default / hover / press states" viewport="700x260" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Primary Yellow</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .big {
+    height: 120px;
+    border-radius: 20px;
+    background: #ffe28d;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+  .big .title { font-family: var(--font-display); font-weight: 700; font-size: 28px; color: #1d1d1d; letter-spacing: -0.01em; }
+  .big .hex { font-family: var(--font-body); font-weight: 700; font-size: 14px; color: #1d1d1d; opacity: 0.65; }
+  .states { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .state {
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 10px;
+    color: #1d1d1d;
+  }
+  .state .s-name { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
+  .state .s-hex { font-size: 11px; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="big">
+    <div class="title">Primary — Gelb</div>
+    <div class="hex">#FFE28D</div>
+  </div>
+  <div class="states">
+    <div class="state" style="background:#ffe28d">
+      <div class="s-name">default</div><div class="s-hex">#FFE28D</div>
+    </div>
+    <div class="state" style="background:#fcd66b">
+      <div class="s-name">hover</div><div class="s-hex">#FCD66B</div>
+    </div>
+    <div class="state" style="background:#f2c856">
+      <div class="s-name">press</div><div class="s-hex">#F2C856</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

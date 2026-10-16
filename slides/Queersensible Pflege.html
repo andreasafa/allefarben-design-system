@@ -1,0 +1,1028 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Queersensible Pflege Deck" subtitle="14-slide deck on organizing queer-sensitive care" viewport="1920x1080" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Queersensible Pflege organisieren — AlleFarben × QueerCareKollektiv</title>
+<style>
+@font-face { font-family: "Dosis"; src: url("fonts/Dosis.ttf") format("truetype"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("fonts/OpenSans.ttf") format("truetype"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("fonts/Caveat.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
+
+:root {
+  --surface: #fffaf6;
+  --surface-2: #f5f0eb;
+  --surface-3: #ebe5e0;
+  --ink: #1d1d1d;
+  --ink-muted: rgba(29,29,29,0.64);
+  --ink-soft: rgba(29,29,29,0.42);
+  --ink-line: rgba(29,29,29,0.14);
+  --primary: #ffe28d;
+  --primary-deep: #f2c94c;
+  --peach: #e39f9a;
+  --mint: #98d7c2;
+  --blue: #78a5dc;
+  --purple: #b89bca;
+  --night: #1b1a24;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #000; font-family: "Open Sans", system-ui, sans-serif; color: var(--ink); }
+h1,h2,h3,h4,h5 { font-family: "Dosis", sans-serif; font-weight: 700; letter-spacing: -0.01em; line-height: 1; }
+
+section.slide {
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.5;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─── Shared chrome ─────────────────────────────────────── */
+.chrome-top {
+  position: absolute; top: 48px; left: 64px; right: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: "Open Sans"; font-size: 14px;
+  color: var(--ink-soft); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.chrome-top .brand { display: flex; align-items: center; gap: 14px; }
+.brand-dot {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: conic-gradient(from 200deg, #e39f9a, #ffe28d, #98d7c2, #78a5dc, #b89bca, #e39f9a);
+}
+.chrome-bot {
+  position: absolute; bottom: 44px; left: 64px; right: 64px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  font-family: "Open Sans"; font-size: 14px; color: var(--ink-soft);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pg { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+/* ─── Accent utilities ──────────────────────────────────── */
+.spectrum-bar {
+  height: 8px; border-radius: 999px;
+  background: linear-gradient(to right, #e39f9a 0 20%, #ffe28d 20% 40%, #98d7c2 40% 60%, #78a5dc 60% 80%, #b89bca 80% 100%);
+}
+.tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 16px; border-radius: 999px;
+  background: rgba(29,29,29,0.06); color: var(--ink);
+  font-family: "Open Sans"; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.tag .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary-deep); }
+.tag.peach .dot { background: var(--peach); }
+.tag.mint .dot { background: var(--mint); }
+.tag.blue .dot { background: var(--blue); }
+.tag.purple .dot { background: var(--purple); }
+
+/* ─── Section numeral "01 —" ────────────────────────────── */
+.section-num {
+  font-family: "Dosis"; font-size: 18px; font-weight: 700;
+  letter-spacing: 0.32em; color: var(--ink-muted);
+}
+
+/* Reusable kicker */
+.kicker {
+  font-family: "Open Sans"; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-muted);
+}
+
+/* ─────────── SLIDE 01 — Title ─────────── */
+.s-title { background: var(--surface); display: grid; grid-template-columns: 1.15fr 0.85fr; }
+.s-title .left {
+  padding: 120px 80px 80px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.s-title h1 {
+  font-size: 132px; font-weight: 700; line-height: 0.94; letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.s-title h1 em {
+  font-style: normal; color: var(--ink);
+  background: linear-gradient(180deg, transparent 62%, var(--primary) 62% 94%, transparent 94%);
+  padding: 0 6px;
+}
+.s-title .sub {
+  font-size: 24px; line-height: 1.4; color: var(--ink-muted);
+  max-width: 620px; margin-top: 32px;
+}
+.s-title .meta {
+  display: flex; align-items: center; gap: 40px; font-size: 16px; color: var(--ink-muted);
+}
+.s-title .meta .pair { display: flex; flex-direction: column; gap: 4px; }
+.s-title .meta .pair b { color: var(--ink); font-weight: 700; }
+
+.s-title .right {
+  position: relative; overflow: hidden;
+  background: var(--surface-2);
+}
+.s-title .right img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+}
+.s-title .right::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 40%;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.35));
+}
+.s-title .badge {
+  position: absolute; left: 48px; bottom: 48px; z-index: 2;
+  background: var(--surface); padding: 20px 24px; border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  display: flex; align-items: center; gap: 16px; max-width: 360px;
+}
+.s-title .badge .ic {
+  width: 44px; height: 44px; border-radius: 12px; background: var(--primary);
+  display: grid; place-items: center; flex-shrink: 0;
+}
+.s-title .badge h5 { font-size: 18px; }
+.s-title .badge p { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
+
+/* ─────────── SLIDE 02 — TOC ─────────── */
+.s-toc { padding: 96px 96px 72px; display: grid; grid-template-rows: auto 1fr auto; gap: 48px; }
+.s-toc h2 { font-size: 88px; line-height: 0.95; max-width: 1100px; }
+.s-toc h2 span { color: var(--peach); }
+.s-toc .grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-content: start;
+}
+.toc-card {
+  background: var(--surface-2); border-radius: 20px; padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 16px; min-height: 220px;
+  border-top: 6px solid transparent;
+}
+.toc-card .n { font-family: "Dosis"; font-size: 22px; font-weight: 700; color: var(--ink-muted); }
+.toc-card h4 { font-size: 32px; line-height: 1.05; }
+.toc-card p { font-size: 16px; color: var(--ink-muted); line-height: 1.5; margin-top: auto; }
+.toc-card.c1 { border-color: var(--peach); }
+.toc-card.c2 { border-color: var(--primary-deep); }
+.toc-card.c3 { border-color: var(--mint); }
+.toc-card.c4 { border-color: var(--blue); }
+.toc-card.c5 { border-color: var(--purple); }
+.toc-card.c6 { background: var(--night); color: #fff; border-color: var(--primary); }
+.toc-card.c6 .n { color: rgba(255,255,255,0.55); }
+.toc-card.c6 p { color: rgba(255,255,255,0.72); }
+
+/* ─────────── SLIDE 03 — Statement (big quote) ─────────── */
+.s-stmt { background: var(--night); color: #fff; padding: 120px 120px 80px; display: grid; grid-template-rows: auto 1fr auto; gap: 40px; }
+.s-stmt .kicker { color: rgba(255,255,255,0.6); }
+.s-stmt blockquote {
+  font-family: "Dosis"; font-weight: 700;
+  font-size: 108px; line-height: 1.02; letter-spacing: -0.02em;
+  max-width: 1500px;
+}
+.s-stmt blockquote em { font-style: normal; color: var(--primary); }
+.s-stmt .attr {
+  display: flex; align-items: center; gap: 20px;
+  color: rgba(255,255,255,0.7); font-size: 16px; letter-spacing: 0.06em;
+}
+.s-stmt .attr .line { width: 40px; height: 1px; background: rgba(255,255,255,0.3); }
+.s-stmt .fade-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(60% 60% at 80% 20%, #000 0%, transparent 75%);
+}
+
+/* ─────────── SLIDE 04 — Section opener "01 Warum?" ─────────── */
+.s-section {
+  padding: 96px; display: grid; grid-template-columns: 1fr 0.9fr; gap: 72px; align-items: center;
+  background: var(--surface);
+}
+.s-section.peach { background: #faece9; }
+.s-section.mint { background: #e9f5ef; }
+.s-section.blue { background: #e9f0f8; }
+.s-section .num {
+  font-family: "Dosis"; font-weight: 700; font-size: 260px; line-height: 0.8; letter-spacing: -0.04em;
+  color: var(--ink); opacity: 0.12;
+}
+.s-section .text { align-self: center; max-width: 780px; }
+.s-section h2 { font-size: 104px; line-height: 0.95; margin-top: 28px; }
+.s-section p.lead { font-size: 26px; line-height: 1.45; color: var(--ink-muted); margin-top: 28px; max-width: 640px; }
+
+/* ─────────── SLIDE 05 — Statistics row ─────────── */
+.s-stats { padding: 96px; display: grid; grid-template-rows: auto 1fr; gap: 64px; }
+.s-stats header { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: end; }
+.s-stats h2 { font-size: 76px; line-height: 1; max-width: 900px; }
+.s-stats header p { font-size: 20px; line-height: 1.5; color: var(--ink-muted); max-width: 560px; }
+.s-stats .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: stretch; }
+.stat {
+  background: var(--surface-2); padding: 40px 32px; border-radius: 20px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
+  min-height: 380px;
+}
+.stat .big { font-family: "Dosis"; font-size: 120px; font-weight: 700; line-height: 0.9; letter-spacing: -0.03em; color: var(--ink); }
+.stat .label { font-size: 18px; line-height: 1.4; color: var(--ink-muted); }
+.stat.fill-1 { background: var(--peach); color: #2a1615; }
+.stat.fill-1 .big { color: #2a1615; }
+.stat.fill-1 .label { color: rgba(42,22,21,0.72); }
+.stat.fill-2 { background: var(--primary); color: #3a2c08; }
+.stat.fill-2 .big { color: #3a2c08; }
+.stat.fill-2 .label { color: rgba(58,44,8,0.75); }
+.stat .src { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: currentColor; opacity: 0.55; }
+
+/* ─────────── SLIDE 06 — Two-column editorial with photo ─────────── */
+.s-editorial { padding: 0; display: grid; grid-template-columns: 0.95fr 1.05fr; }
+.s-editorial .col-img { background: var(--surface-2); position: relative; overflow: hidden; }
+.s-editorial .col-img img { width: 100%; height: 100%; object-fit: cover; }
+.s-editorial .col-img .caption {
+  position: absolute; left: 48px; bottom: 48px; color: #fff;
+  background: rgba(29,29,29,0.82); padding: 16px 22px; border-radius: 14px;
+  font-size: 15px; max-width: 360px; line-height: 1.45;
+}
+.s-editorial .col-txt { padding: 96px 96px 96px 80px; display: flex; flex-direction: column; justify-content: center; gap: 36px; }
+.s-editorial .col-txt h2 { font-size: 76px; line-height: 1; max-width: 640px; }
+.s-editorial .list { display: flex; flex-direction: column; gap: 28px; }
+.s-editorial .item { display: grid; grid-template-columns: 56px 1fr; gap: 24px; align-items: start; }
+.s-editorial .item .num {
+  width: 44px; height: 44px; border-radius: 12px; background: var(--primary);
+  display: grid; place-items: center; font-family: "Dosis"; font-weight: 700; font-size: 22px;
+}
+.s-editorial .item h4 { font-size: 26px; line-height: 1.1; margin-bottom: 6px; }
+.s-editorial .item p { font-size: 18px; color: var(--ink-muted); line-height: 1.5; }
+
+/* ─────────── SLIDE 07 — Framework (4 pillars) ─────────── */
+.s-framework { padding: 96px; display: grid; grid-template-rows: auto 1fr; gap: 56px; }
+.s-framework header { display: flex; justify-content: space-between; align-items: end; gap: 48px; }
+.s-framework h2 { font-size: 80px; line-height: 1; max-width: 1000px; }
+.s-framework header p { font-size: 18px; color: var(--ink-muted); max-width: 380px; }
+.pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pillar {
+  background: var(--surface); border: 1.5px solid var(--ink-line); border-radius: 20px;
+  padding: 32px 28px; display: flex; flex-direction: column; gap: 18px; min-height: 420px;
+  position: relative; overflow: hidden;
+}
+.pillar .ic {
+  width: 68px; height: 68px; border-radius: 16px; display: grid; place-items: center;
+  color: var(--ink);
+}
+.pillar.p1 .ic { background: var(--peach); }
+.pillar.p2 .ic { background: var(--primary); }
+.pillar.p3 .ic { background: var(--mint); }
+.pillar.p4 .ic { background: var(--blue); color: #fff; }
+.pillar h4 { font-size: 30px; line-height: 1.05; }
+.pillar p { font-size: 16px; line-height: 1.5; color: var(--ink-muted); }
+.pillar ul { margin-top: auto; font-size: 14px; color: var(--ink-muted); line-height: 1.6; list-style: none; }
+.pillar ul li { padding-left: 16px; position: relative; }
+.pillar ul li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: currentColor; opacity: 0.4; border-radius: 50%; }
+
+/* ─────────── SLIDE 08 — Do / Don't ─────────── */
+.s-dodont { padding: 96px; display: grid; grid-template-rows: auto 1fr; gap: 56px; }
+.s-dodont h2 { font-size: 80px; line-height: 1; max-width: 1200px; }
+.s-dodont .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.dcol { padding: 40px 40px; border-radius: 24px; display: flex; flex-direction: column; gap: 18px; }
+.dcol.do { background: var(--mint); }
+.dcol.dont { background: #ead6d4; }
+.dcol .head { display: flex; align-items: center; gap: 14px; }
+.dcol .head .chip {
+  padding: 8px 14px; border-radius: 999px; background: rgba(29,29,29,0.85); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.dcol h3 { font-size: 44px; }
+.dcol ul { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.dcol ul li { font-size: 19px; line-height: 1.45; color: var(--ink); padding-left: 36px; position: relative; }
+.dcol.do ul li::before {
+  content: ""; position: absolute; left: 0; top: 6px; width: 22px; height: 22px; border-radius: 50%;
+  background: #1f5a46 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8.5l3 3L13 4.5'/></svg>") center/12px no-repeat;
+}
+.dcol.dont ul li::before {
+  content: ""; position: absolute; left: 0; top: 6px; width: 22px; height: 22px; border-radius: 50%;
+  background: #7a2b27 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round'><path d='M4 4l8 8M12 4l-8 8'/></svg>") center/12px no-repeat;
+}
+
+/* ─────────── SLIDE 09 — Journey / 5 steps ─────────── */
+.s-journey { padding: 96px; display: grid; grid-template-rows: auto 1fr; gap: 72px; }
+.s-journey h2 { font-size: 80px; line-height: 1; max-width: 1200px; }
+.journey-track {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; position: relative;
+}
+.journey-track::before {
+  content: ""; position: absolute; top: 36px; left: 6%; right: 6%; height: 2px; background: var(--ink-line);
+}
+.jstep {
+  display: flex; flex-direction: column; gap: 18px; padding: 0 8px; position: relative; z-index: 1;
+}
+.jstep .circle {
+  width: 72px; height: 72px; border-radius: 50%;
+  display: grid; place-items: center; font-family: "Dosis"; font-weight: 700; font-size: 30px;
+  color: var(--ink); background: var(--surface); border: 2px solid var(--ink);
+}
+.jstep.j1 .circle { background: var(--peach); border-color: var(--peach); }
+.jstep.j2 .circle { background: var(--primary); border-color: var(--primary); }
+.jstep.j3 .circle { background: var(--mint); border-color: var(--mint); }
+.jstep.j4 .circle { background: var(--blue); border-color: var(--blue); color: #fff; }
+.jstep.j5 .circle { background: var(--purple); border-color: var(--purple); color: #fff; }
+.jstep h4 { font-size: 28px; line-height: 1.05; }
+.jstep p { font-size: 16px; line-height: 1.5; color: var(--ink-muted); }
+.jstep .dur {
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted);
+  font-weight: 700;
+}
+
+/* ─────────── SLIDE 10 — Case study photo full ─────────── */
+.s-case { padding: 0; position: relative; overflow: hidden; background: var(--night); color: #fff; }
+.s-case img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.s-case::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(100deg, rgba(20,19,28,0.99) 0 58%, rgba(20,19,28,0.92) 70%, rgba(20,19,28,0.55) 85%, rgba(20,19,28,0.1) 100%);
+}
+.s-case .wrap { position: relative; z-index: 3; padding: 96px; display: grid; grid-template-rows: auto 1fr auto; gap: 36px; height: 100%; }
+.s-case .wrap * { color: #fff; }
+.s-case .kicker { color: rgba(255,255,255,0.6) !important; }
+.s-case h2 { font-size: 84px; line-height: 1.02; max-width: 1000px; color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,0.9); }
+.s-case h2 em { font-style: normal; color: var(--primary) !important; }
+.s-case .body { display: grid; grid-template-columns: 620px 1fr; gap: 80px; align-items: end; max-width: 1340px; }
+.s-case .body p { font-size: 20px; line-height: 1.55; color: rgba(255,255,255,0.82); }
+.s-case .person {
+  display: flex; flex-direction: column; gap: 6px; font-size: 16px; color: rgba(255,255,255,0.7);
+  border-left: 2px solid var(--primary); padding-left: 16px;
+}
+.s-case .person b { color: #fff; font-size: 20px; font-weight: 700; font-family: "Dosis"; }
+.s-case .stats-inline { display: flex; gap: 48px; margin-top: 40px; }
+.s-case .stats-inline .num { font-family: "Dosis"; font-size: 72px; font-weight: 700; line-height: 1; color: var(--primary); }
+.s-case .stats-inline .lbl { font-size: 14px; color: rgba(255,255,255,0.65); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; max-width: 200px; }
+
+/* ─────────── SLIDE 11 — Team / Andreas ─────────── */
+.s-team { padding: 0; display: grid; grid-template-columns: 0.9fr 1.1fr; background: var(--surface); }
+.s-team .photo { background: var(--surface-2); position: relative; overflow: hidden; }
+.s-team .photo img { width: 100%; height: 100%; object-fit: cover; }
+.s-team .txt { padding: 96px 96px 96px 80px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+.s-team h2 { font-size: 72px; line-height: 1.02; }
+.s-team blockquote {
+  font-family: "Dosis"; font-size: 32px; line-height: 1.3; color: var(--ink); font-weight: 500;
+  padding-left: 20px; border-left: 4px solid var(--primary-deep);
+}
+.s-team .byline { display: flex; align-items: center; gap: 16px; }
+.s-team .byline .nm { font-weight: 700; font-size: 18px; }
+.s-team .byline .role { font-size: 14px; color: var(--ink-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+.s-team .meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 12px; }
+.s-team .meta-grid .cell { padding: 20px 20px; border-radius: 14px; background: var(--surface-2); }
+.s-team .meta-grid .cell b { display: block; font-family: "Dosis"; font-size: 32px; font-weight: 700; }
+.s-team .meta-grid .cell span { font-size: 13px; color: var(--ink-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ─────────── SLIDE 12 — Ecosystem diagram ─────────── */
+.s-eco { padding: 72px 96px 88px; display: grid; grid-template-rows: auto 1fr; gap: 28px; }
+.s-eco h2 { font-size: 60px; line-height: 1.02; max-width: 1100px; }
+.s-eco .lead { font-size: 18px; color: var(--ink-muted); max-width: 860px; margin-top: 14px; }
+.s-eco .diagram {
+  position: relative; width: 1600px; height: 560px; margin: 0 auto;
+  justify-self: center; align-self: center;
+}
+.s-eco .center {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 260px; height: 260px; border-radius: 50%;
+  background: var(--night); color: #fff;
+  display: grid; place-items: center; gap: 8px; grid-auto-flow: row;
+  box-shadow: 0 20px 60px rgba(27,26,36,0.25);
+  z-index: 3;
+  text-align: center; padding: 0 28px;
+}
+.s-eco .center b { font-family: "Dosis"; font-size: 30px; font-weight: 700; line-height: 1; }
+.s-eco .center span { font-size: 12px; color: rgba(255,255,255,0.7); letter-spacing: 0.12em; text-transform: uppercase; }
+.s-eco .ring {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 480px; height: 480px; border-radius: 50%;
+  border: 1.5px dashed var(--ink-line);
+}
+.s-eco .ring-2 {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 760px; height: 760px; border-radius: 50%;
+  border: 1.5px dashed var(--ink-line);
+}
+.s-eco .node {
+  position: absolute; width: 220px; text-align: center;
+  background: var(--surface); border: 1.5px solid var(--ink-line);
+  border-radius: 18px; padding: 18px 16px;
+  z-index: 2;
+}
+.s-eco .node b { font-family: "Dosis"; font-size: 22px; display: block; margin-bottom: 4px; }
+.s-eco .node span { font-size: 13px; color: var(--ink-muted); }
+.s-eco .node .chip {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  background: var(--primary); color: var(--ink); margin-bottom: 6px;
+}
+/* Center sits at (800, 280); box is 1600x560. Nodes placed by top-left. */
+.s-eco .n1 { left: 690px; top: 10px; }
+.s-eco .n1 .chip { background: var(--peach); }
+.s-eco .n2 { left: 1250px; top: 110px; }
+.s-eco .n2 .chip { background: var(--primary); }
+.s-eco .n3 { left: 1160px; top: 420px; }
+.s-eco .n3 .chip { background: var(--mint); }
+.s-eco .n4 { left: 220px; top: 420px; }
+.s-eco .n4 .chip { background: var(--blue); color: #fff; }
+.s-eco .n5 { left: 130px; top: 110px; }
+.s-eco .n5 .chip { background: var(--purple); color: #fff; }
+
+/* ─────────── SLIDE 13 — Commitments ─────────── */
+.s-commit { padding: 96px; display: grid; grid-template-rows: auto 1fr; gap: 56px; background: var(--primary); color: var(--ink); }
+.s-commit h2 { font-size: 88px; line-height: 0.98; max-width: 1500px; }
+.s-commit .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-content: start; }
+.commit {
+  background: rgba(29,29,29,0.06); border-radius: 18px; padding: 28px 32px;
+  display: grid; grid-template-columns: 60px 1fr; gap: 20px; align-items: start;
+}
+.commit .n { font-family: "Dosis"; font-size: 44px; font-weight: 700; line-height: 1; color: var(--ink); }
+.commit h4 { font-size: 24px; line-height: 1.15; margin-bottom: 4px; }
+.commit p { font-size: 16px; line-height: 1.5; color: rgba(29,29,29,0.72); }
+
+/* ─────────── SLIDE 14 — CTA / Thanks ─────────── */
+.s-cta { padding: 0; display: grid; grid-template-columns: 1.05fr 0.95fr; background: var(--surface); }
+.s-cta .l { padding: 120px 96px; display: flex; flex-direction: column; justify-content: space-between; }
+.s-cta h2 { font-size: 136px; line-height: 0.92; letter-spacing: -0.025em; }
+.s-cta h2 em { font-style: normal; color: var(--peach); }
+.s-cta p.sub { font-size: 22px; color: var(--ink-muted); max-width: 620px; line-height: 1.5; margin-top: 24px; }
+.s-cta .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 640px; margin-top: auto; }
+.s-cta .contact .card { padding: 22px 24px; border-radius: 16px; background: var(--surface-2); }
+.s-cta .contact .card .lbl { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
+.s-cta .contact .card b { font-family: "Dosis"; font-size: 26px; display: block; margin-top: 8px; line-height: 1.1; }
+.s-cta .contact .card span { font-size: 14px; color: var(--ink-muted); }
+.s-cta .r { position: relative; overflow: hidden; background: var(--surface-2); }
+.s-cta .r img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.s-cta .thank {
+  position: absolute; right: 48px; top: 48px; padding: 14px 22px;
+  background: var(--primary); border-radius: 999px; font-family: "Dosis"; font-weight: 700;
+  font-size: 20px; letter-spacing: 0.06em;
+}
+
+/* tiny util */
+.underline-primary {
+  background: linear-gradient(180deg, transparent 70%, var(--primary) 70% 96%, transparent 96%);
+  padding: 0 4px;
+}
+.underline-mint {
+  background: linear-gradient(180deg, transparent 70%, var(--mint) 70% 96%, transparent 96%);
+  padding: 0 4px;
+}
+.underline-peach {
+  background: linear-gradient(180deg, transparent 70%, var(--peach) 70% 96%, transparent 96%);
+  padding: 0 4px;
+}
+
+/* SVG icon sizing */
+.ic svg { width: 34px; height: 34px; }
+</style>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+<!-- ═══════════ 01 · TITLE ═══════════ -->
+<section class="slide s-title" data-label="Titel">
+  <div class="left">
+    <div class="chrome-top" style="position: static; margin-bottom: 48px;">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>AlleFarben × QueerCareKollektiv</span>
+      </div>
+      <span>Workshop · Berlin 2026</span>
+    </div>
+    <div>
+      <span class="tag peach"><span class="dot"></span>Workshop-Unterlagen</span>
+      <h1 style="margin-top: 28px;">Queer&shy;sensible<br>Pflege <em>organisieren</em>.</h1>
+      <p class="sub">Wie wir Alltagshilfe so gestalten, dass queere Menschen und Ältere sich nicht erklären, rechtfertigen oder verstecken müssen — sondern ankommen.</p>
+    </div>
+    <div class="meta">
+      <div class="pair"><span>Präsentation</span><b>QueerCareKollektiv</b></div>
+      <div class="pair"><span>Ort</span><b>Berlin · Goethestr. 58</b></div>
+      <div class="pair"><span>Datum</span><b>März 2026</b></div>
+    </div>
+  </div>
+  <div class="right">
+    <img src="img/md2x-1.png" alt="Zwei Menschen gemeinsam in der Küche">
+    <div class="badge">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10z"/></svg>
+      </div>
+      <div>
+        <h5>Pflege auf Augenhöhe</h5>
+        <p>Begleitung ohne Erklärungs&shy;not, ohne Umwege.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 02 · AGENDA ═══════════ -->
+<section class="slide s-toc" data-label="Agenda">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>AlleFarben × QueerCareKollektiv</span></div>
+    <span>Agenda</span>
+  </div>
+  <div style="padding-top: 36px;">
+    <span class="kicker">Was wir heute besprechen</span>
+    <h2 style="margin-top: 20px;">Sechs Kapitel, <span>ein&nbsp;Versprechen</span>: Pflege, die Menschen meint.</h2>
+  </div>
+  <div class="grid">
+    <div class="toc-card c1"><span class="n">01 ·  Warum?</span><h4>Warum queersensible Pflege</h4><p>Die Versorgungslücke, die viele nicht sehen wollen — und warum sie teuer ist.</p></div>
+    <div class="toc-card c2"><span class="n">02 ·  Was?</span><h4>Was „queer&shy;sensibel" bedeutet</h4><p>Jenseits von Regenbogen-Stickern: Haltung, Sprache, Strukturen.</p></div>
+    <div class="toc-card c3"><span class="n">03 ·  Wie?</span><h4>Vier Säulen der Praxis</h4><p>Haltung, Sprache, Räume, Angehörige — unser Arbeitsmodell.</p></div>
+    <div class="toc-card c4"><span class="n">04 ·  Weg</span><h4>Der Weg zur Klient:in</h4><p>Fünf Schritte vom ersten Anruf bis zur festen Begleitung.</p></div>
+    <div class="toc-card c5"><span class="n">05 ·  Wir</span><h4>Wer AlleFarben ist</h4><p>Unser Team, unsere Werte, unser Netzwerk in Berlin und Brandenburg.</p></div>
+    <div class="toc-card c6"><span class="n">06 ·  Los</span><h4>Wie's weitergeht</h4><p>Unsere Selbst&shy;verpflichtung — und was wir von Ihnen brauchen.</p></div>
+  </div>
+  <div class="chrome-bot">
+    <span>AlleFarben Alltagshilfe</span>
+    <span class="pg">02 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 03 · OPENING STATEMENT ═══════════ -->
+<section class="slide s-stmt" data-label="Problem-Statement">
+  <div class="fade-grid"></div>
+  <div class="chrome-top" style="color: rgba(255,255,255,0.55);">
+    <div class="brand"><span class="brand-dot"></span><span>AlleFarben × QueerCareKollektiv</span></div>
+    <span>Ausgangs&shy;punkt</span>
+  </div>
+  <div>
+    <span class="kicker">Der unbequeme Satz, mit dem alles anfängt</span>
+    <blockquote style="margin-top: 24px;">
+      „Im Alter gehen viele queere Menschen wieder <em>zurück in den Schrank</em> — weil sie Angst vor der Pflege haben."
+    </blockquote>
+  </div>
+  <div class="attr">
+    <span class="line"></span>
+    <span>DAH &middot; Deutsche Aidshilfe · 2023</span>
+  </div>
+  <div class="chrome-bot" style="color: rgba(255,255,255,0.55);">
+    <span>Ausgangspunkt</span>
+    <span class="pg">03 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 04 · SECTION OPENER 01 ═══════════ -->
+<section class="slide s-section peach" data-label="Kapitel 01 Warum">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 01</span></div>
+    <span>Warum queersensible Pflege</span>
+  </div>
+  <div class="num">01</div>
+  <div class="text">
+    <span class="kicker">Kapitel 01</span>
+    <h2>Warum<br>queersensible<br>Pflege.</h2>
+    <p class="lead">Die demographische Kurve steigt schneller als die Versorgungs&shy;strukturen. Für LSBTI* Senior:innen heißt das: zweimal unsichtbar — einmal als alt, einmal als queer.</p>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 01 · Warum</span>
+    <span class="pg">04 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 05 · STATS ═══════════ -->
+<section class="slide s-stats" data-label="Zahlen die wehtun">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 01</span></div>
+    <span>Warum</span>
+  </div>
+  <header style="padding-top: 48px;">
+    <div>
+      <span class="kicker">Die Lücke in Zahlen</span>
+      <h2 style="margin-top: 20px;">Zahlen, die in Pflege&shy;statistiken selten stehen.</h2>
+    </div>
+    <p>Die Mehrheit queerer Älterer fürchtet Diskriminierung in Pflege&shy;einrichtungen — und verschweigt deshalb Identität, Partner:innen oder Biografie. Das verändert die Pflegequalität. Nicht im Positiven.</p>
+  </header>
+  <div class="grid">
+    <div class="stat fill-1">
+      <span class="kicker" style="color: rgba(42,22,21,0.6);">Angst vor Pflege</span>
+      <div class="big">72%</div>
+      <div class="label">der LSBTI* Senior:innen haben Angst, sich im Pflegekontext zu outen.</div>
+      <div class="src">Quelle: DAH / BMFSFJ 2023</div>
+    </div>
+    <div class="stat fill-2">
+      <span class="kicker" style="color: rgba(58,44,8,0.6);">Re-Closeting</span>
+      <div class="big">1 v. 3</div>
+      <div class="label">queeren Älteren versteckt Partner:in oder Identität erneut bei Einzug.</div>
+      <div class="src">Quelle: LSVD-Studie 2022</div>
+    </div>
+    <div class="stat">
+      <span class="kicker">Sensibilisierung</span>
+      <div class="big">&lt;9%</div>
+      <div class="label">der ambulanten Dienste bieten strukturierte Schulungen zu queerer Pflege.</div>
+      <div class="src">Quelle: Queer&shy;Pflege Monitor 2024</div>
+    </div>
+    <div class="stat">
+      <span class="kicker">Wahlfamilien</span>
+      <div class="big">+38%</div>
+      <div class="label">queerer Senior:innen leben allein — doppelt so viele wie im Durchschnitt.</div>
+      <div class="src">Quelle: DZA Altersstudie 2023</div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 01 · Zahlen</span>
+    <span class="pg">05 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 06 · EDITORIAL (Was heißt queersensibel) ═══════════ -->
+<section class="slide s-editorial" data-label="Was queersensibel heisst">
+  <div class="col-img">
+    <img src="img/md2x-2.png" alt="Pflegerin beim Kaffeekochen, Klientin lächelt">
+    <div class="caption">„Sie müssen hier nicht erklären, wen Sie lieben oder wen Sie mal geliebt haben. Wir hören zu, ohne zu werten." — Leitsatz AlleFarben</div>
+  </div>
+  <div class="col-txt">
+    <span class="kicker">Kapitel 02 · Was bedeutet queersensibel</span>
+    <h2>Regenbogen&shy;sticker sind <span class="underline-primary">kein Konzept</span>.</h2>
+    <p style="font-size: 20px; color: var(--ink-muted); line-height: 1.5;">Queer&shy;sensible Pflege fängt nicht am Eingang an, sondern am Schreibtisch: in Formularen, Aufnahme&shy;gesprächen, Dienstplänen, Biografie&shy;bögen. Drei Ebenen greifen ineinander.</p>
+    <div class="list">
+      <div class="item">
+        <div class="num">1</div>
+        <div>
+          <h4>Haltung statt Toleranz.</h4>
+          <p>Toleranz heißt: „Ich ertrage dich." Haltung heißt: „Ich kenne deine Lebens&shy;realität — und plane sie mit."</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">2</div>
+        <div>
+          <h4>Sprache, die nicht misgendert.</h4>
+          <p>Pronomen, Wahl&shy;familien, Chosen Names gehören in die Akte — und in den Übergabe&shy;bogen, nicht nur ins Herz.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <div>
+          <h4>Strukturen, die nicht outen.</h4>
+          <p>Wer in der Akte steht, liest die Akte. Zugriffs&shy;rechte sind Schutz&shy;rechte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 07 · FRAMEWORK ═══════════ -->
+<section class="slide s-framework" data-label="Vier Säulen">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 03</span></div>
+    <span>Vier Säulen der Praxis</span>
+  </div>
+  <header style="padding-top: 36px;">
+    <div>
+      <span class="kicker">Unser Arbeitsmodell</span>
+      <h2 style="margin-top: 20px;">Vier Säulen. Keine Abkürzungen.</h2>
+    </div>
+    <p>Jede Säule hat ein Arbeits&shy;instrument, eine Zuständige, und ein Kontroll&shy;kriterium. Was nicht prüfbar ist, ist nicht queer&shy;sensibel — sondern Absichts&shy;erklärung.</p>
+  </header>
+  <div class="pillars">
+    <div class="pillar p1">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10z"/></svg>
+      </div>
+      <h4>Haltung<br>&amp; Wissen</h4>
+      <p>Jede:r Mitarbeiter:in durchläuft ein 2-tägiges Sensibilisierungs&shy;training; jährliche Auffrischung.</p>
+      <ul>
+        <li>Biografiearbeit</li>
+        <li>Trauma&shy;informierte Praxis</li>
+        <li>HIV-Basiswissen</li>
+      </ul>
+    </div>
+    <div class="pillar p2">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h14l4 4v6H3z"/><path d="M7 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+      </div>
+      <h4>Sprache<br>&amp; Akten</h4>
+      <p>Pronomen-Felder, Chosen Names, Biografie-Zeit&shy;leiste. Das Dokument ist politisch.</p>
+      <ul>
+        <li>Aufnahme&shy;bogen v3</li>
+        <li>Pronomen-Feld pflicht</li>
+        <li>Wahlfamilien-Register</li>
+      </ul>
+    </div>
+    <div class="pillar p3">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+      </div>
+      <h4>Räume<br>&amp; Rituale</h4>
+      <p>Wartebereiche, Türschilder, Besuchs&shy;zeiten: Räume erzählen, wer willkommen ist.</p>
+      <ul>
+        <li>Flaggen &amp; Sichtbarkeit</li>
+        <li>Neutrale Bäder</li>
+        <li>Besuchs&shy;regelung ≠ Ehe</li>
+      </ul>
+    </div>
+    <div class="pillar p4">
+      <div class="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M17 11a3 3 0 1 0 0-6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 14a4.5 4.5 0 0 1 5 4"/></svg>
+      </div>
+      <h4>Angehörige<br>&amp; Netzwerk</h4>
+      <p>Wahlfamilie zählt wie Blutsfamilie. Angehörigen&shy;arbeit ist nicht optional.</p>
+      <ul>
+        <li>Wahlfamilien-Policy</li>
+        <li>Vollmachts&shy;beratung</li>
+        <li>Peer-Unterstützung</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 03 · Vier Säulen</span>
+    <span class="pg">07 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 08 · DO/DON'T ═══════════ -->
+<section class="slide s-dodont" data-label="Do und Dont">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 03</span></div>
+    <span>Praxis-Check</span>
+  </div>
+  <div style="padding-top: 36px;">
+    <span class="kicker">Kurz &amp; konkret</span>
+    <h2 style="margin-top: 20px;">Was jede:r ab morgen anders machen kann.</h2>
+  </div>
+  <div class="cols">
+    <div class="dcol do">
+      <div class="head">
+        <span class="chip">So · Ja bitte</span>
+      </div>
+      <h3>Praxis, die einlädt.</h3>
+      <ul>
+        <li>„Wie möchten Sie angesprochen werden?" — bei jeder Neuaufnahme, immer.</li>
+        <li>Chosen Name und Pronomen stehen in der Akte &amp; auf dem Übergabebogen.</li>
+        <li>Wahlfamilien&shy;kontakte werden wie Angehörige eingetragen und benachrichtigt.</li>
+        <li>Biografie&shy;arbeit fragt nach Coming-out, HIV, Krieg, Verfolgung — im sicheren Rahmen.</li>
+        <li>Sichtbare Zeichen (Flagge, Aushang) — kombiniert mit geschultem Personal.</li>
+      </ul>
+    </div>
+    <div class="dcol dont">
+      <div class="head">
+        <span class="chip">Nicht · Bitte vermeiden</span>
+      </div>
+      <h3>Praxis, die outet.</h3>
+      <ul>
+        <li>„Sind Sie verheiratet?" als Ja/Nein-Frage — ersetzen durch: „Wer ist wichtig für Sie?"</li>
+        <li>Identität in der Übergabe lautlos weiter&shy;erzählen, ohne Einwilligung.</li>
+        <li>Alte Namen („Deadname") auf Formularen, Schildern, Medikamenten&shy;plänen.</li>
+        <li>Pride-Flagge ohne Schulung dahinter — das ist Marketing, nicht Pflege.</li>
+        <li>„Ich hab kein Problem damit" als Selbst&shy;auskunft. Das Problem ist ja nicht Ihrs.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 03 · Praxis-Check</span>
+    <span class="pg">08 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 09 · JOURNEY ═══════════ -->
+<section class="slide s-journey" data-label="Der Weg">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 04</span></div>
+    <span>Der Weg zur Klient:in</span>
+  </div>
+  <div style="padding-top: 36px;">
+    <span class="kicker">Vom ersten Kontakt bis zur festen Begleitung</span>
+    <h2 style="margin-top: 20px;">Fünf Schritte. Keine Fangfragen.</h2>
+  </div>
+  <div class="journey-track">
+    <div class="jstep j1">
+      <div class="circle">01</div>
+      <span class="dur">Tag 1 · 10 Min</span>
+      <h4>Erster Anruf</h4>
+      <p>Keine Diagnose-Fragen. Nur: Was brauchen Sie? Wer fragt für wen? Wie sollen wir Sie ansprechen?</p>
+    </div>
+    <div class="jstep j2">
+      <div class="circle">02</div>
+      <span class="dur">Woche 1 · 60 Min</span>
+      <h4>Erstgespräch</h4>
+      <p>Kostenlos, bei Ihnen zuhause oder in unserem Raum in der Goethestr. Ohne Zeitdruck.</p>
+    </div>
+    <div class="jstep j3">
+      <div class="circle">03</div>
+      <span class="dur">Woche 2</span>
+      <h4>Matching</h4>
+      <p>Wir schlagen 1–2 Begleit&shy;personen vor. Sie entscheiden, wer kommt. Wechsel jederzeit möglich.</p>
+    </div>
+    <div class="jstep j4">
+      <div class="circle">04</div>
+      <span class="dur">Woche 3+</span>
+      <h4>Begleitung</h4>
+      <p>Feste Bezugs&shy;person, feste Uhrzeit, feste Aufgaben. Plus ein monatlicher Check-in.</p>
+    </div>
+    <div class="jstep j5">
+      <div class="circle">05</div>
+      <span class="dur">Quartalsweise</span>
+      <h4>Review</h4>
+      <p>Gemeinsame Bestands&shy;aufnahme. Was läuft, was nicht. Anpassungen ohne Gesichtsverlust.</p>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 04 · Weg</span>
+    <span class="pg">09 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 10 · CASE STUDY ═══════════ -->
+<section class="slide s-case" data-label="Fallbeispiel">
+  <img class="bg" src="img/md2x-0.png" alt="Alltagshilfe in der Küche">
+  <div class="wrap">
+    <div class="chrome-top" style="position: static; color: rgba(255,255,255,0.55); padding: 0;">
+      <div class="brand"><span class="brand-dot"></span><span>Kapitel 04</span></div>
+      <span>Ein Fallbeispiel</span>
+    </div>
+    <div>
+      <span class="kicker">Was das in der Praxis heißt</span>
+      <h2 style="margin-top: 20px; max-width: 1050px;">„Endlich Hilfe, bei der ich <em>ich&nbsp;selbst</em> sein kann."</h2>
+    </div>
+    <div>
+      <div class="body">
+        <p>Micha, 71, lebt seit 40 Jahren in Berlin-Schöneberg. Herz&shy;erkrankung, zunehmende Mobilitäts&shy;einschränkung. Der erste ambulante Dienst fragte im Aufnahme&shy;gespräch nach „der Ehefrau". Beim zweiten Dienst hing eine Regenbogen&shy;flagge im Büro — und niemand wusste, was Chemsex-Aufarbeitung heißt. Bei uns begleitet ihn seit 18 Monaten Leo, drei Mal die Woche. Einkauf, Arzt, Spaziergang. Und: Gespräche, bei denen nichts erklärt werden muss.</p>
+        <div class="person">
+          <span>Klient</span>
+          <b>Micha, 71</b>
+          <span>Schöneberg · seit Okt. 2024</span>
+        </div>
+      </div>
+      <div class="stats-inline">
+        <div>
+          <div class="num">18</div>
+          <div class="lbl">Monate stabile Begleitung durch feste Bezugs&shy;person</div>
+        </div>
+        <div>
+          <div class="num">0</div>
+          <div class="lbl">Wechsel der Pflegekraft seit Beginn</div>
+        </div>
+        <div>
+          <div class="num">3&times;</div>
+          <div class="lbl">wöchentliche Begleitung, inklusive Arzt&shy;termine</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 11 · TEAM (Andreas) ═══════════ -->
+<section class="slide s-team" data-label="Wer wir sind">
+  <div class="photo">
+    <img src="img/photo-01.png" alt="Andreas im Beratungsraum">
+  </div>
+  <div class="txt">
+    <div class="chrome-top" style="position: static; padding: 0;">
+      <div class="brand"><span class="brand-dot"></span><span>Kapitel 05</span></div>
+      <span>Wer AlleFarben ist</span>
+    </div>
+    <span class="kicker" style="margin-top: 8px;">Gründer &amp; examinierte Pflegefachkraft</span>
+    <h2>Andreas.<br>Und ein Team, das <span class="underline-mint">zuhört</span>.</h2>
+    <blockquote>„Ich habe zu oft gesehen, wie Menschen sich im Alter wieder klein machen. Ich habe AlleFarben gegründet, damit das aufhört."</blockquote>
+    <div class="byline">
+      <div class="nm">Andreas Krüger</div>
+      <span style="color: var(--ink-soft);">·</span>
+      <div class="role">Gründer · Pflegefachkraft</div>
+    </div>
+    <div class="meta-grid">
+      <div class="cell"><b>12</b><span>Begleit&shy;personen</span></div>
+      <div class="cell"><b>47</b><span>Klient:innen</span></div>
+      <div class="cell"><b>2021</b><span>gegründet</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 12 · ECOSYSTEM ═══════════ -->
+<section class="slide s-eco" data-label="Ökosystem">
+  <div class="chrome-top">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 05</span></div>
+    <span>Unser Netzwerk</span>
+  </div>
+  <div style="padding-top: 36px;">
+    <span class="kicker">Wir arbeiten nicht allein</span>
+    <h2>Ein Netz, das trägt — weil es aus vielen Fäden besteht.</h2>
+    <p class="lead">Alltagshilfe funktioniert nur im Verbund: mit Pflegediensten, Ärzt:innen, Community-Räumen, Beratungs&shy;stellen. Hier sind unsere wichtigsten Partner&shy;schaften in Berlin und Brandenburg.</p>
+  </div>
+  <div class="diagram">
+    <div class="ring-2"></div>
+    <div class="ring"></div>
+    <div class="center">
+      <b>AlleFarben<br>Alltagshilfe</b>
+      <span>Koordination · Begleitung</span>
+    </div>
+    <div class="node n1">
+      <span class="chip">Beratung</span>
+      <b>QueerCareKollektiv</b>
+      <span>Supervision &amp; Fachfortbildung</span>
+    </div>
+    <div class="node n2">
+      <span class="chip">Medizin</span>
+      <b>Praxen Motzstraße</b>
+      <span>Hausärztliche Anbindung LSBTI*</span>
+    </div>
+    <div class="node n3">
+      <span class="chip">Community</span>
+      <b>Rubicon &amp; SchwuZ</b>
+      <span>Sichtbarkeit &amp; Peer-Kontakt</span>
+    </div>
+    <div class="node n4">
+      <span class="chip">Recht</span>
+      <b>LSVD Berlin</b>
+      <span>Vollmachten · Patient:innen&shy;verfügung</span>
+    </div>
+    <div class="node n5">
+      <span class="chip">Pflege</span>
+      <b>ambulante Dienste</b>
+      <span>Anschluss&shy;versorgung &amp; SAPV</span>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span>Kapitel 05 · Netzwerk</span>
+    <span class="pg">12 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 13 · COMMITMENTS ═══════════ -->
+<section class="slide s-commit" data-label="Selbstverpflichtung">
+  <div class="chrome-top" style="color: rgba(29,29,29,0.6);">
+    <div class="brand"><span class="brand-dot"></span><span>Kapitel 06</span></div>
+    <span>Unsere Selbst&shy;verpflichtung</span>
+  </div>
+  <div style="padding-top: 36px;">
+    <span class="kicker">Sechs Versprechen. Prüfbar.</span>
+    <h2 style="margin-top: 20px;">Was Sie von uns erwarten dürfen.</h2>
+  </div>
+  <div class="grid">
+    <div class="commit">
+      <span class="n">01</span>
+      <div>
+        <h4>Feste Bezugsperson statt rotierender Schichten.</h4>
+        <p>Maximal 2 Begleit&shy;personen pro Klient:in — vertraute Gesichter, nicht Namen&shy;schilder.</p>
+      </div>
+    </div>
+    <div class="commit">
+      <span class="n">02</span>
+      <div>
+        <h4>Pronomen und Chosen Name in jeder Akte.</h4>
+        <p>Pflichtfeld bei Aufnahme. Änderung jederzeit möglich, ohne Erklärung.</p>
+      </div>
+    </div>
+    <div class="commit">
+      <span class="n">03</span>
+      <div>
+        <h4>Jährliche Fort&shy;bildung für alle Mit&shy;arbeitenden.</h4>
+        <p>Mindestens 16 Stunden p.a. zu queer&shy;sensibler Pflege, HIV, Trauma, Biografie&shy;arbeit.</p>
+      </div>
+    </div>
+    <div class="commit">
+      <span class="n">04</span>
+      <div>
+        <h4>Wahlfamilie ist Familie.</h4>
+        <p>Im Notfall wird benachrichtigt, wer in der Wahlfamilien-Liste steht. Nicht, wer heiratet ist.</p>
+      </div>
+    </div>
+    <div class="commit">
+      <span class="n">05</span>
+      <div>
+        <h4>Kostenlose Erstberatung, immer.</h4>
+        <p>Ohne Voranmeldung, ohne Vertrag, ohne Dringlichkeits&shy;druck. 60 Minuten, bei Ihnen oder bei uns.</p>
+      </div>
+    </div>
+    <div class="commit">
+      <span class="n">06</span>
+      <div>
+        <h4>Transparente Preis&shy;liste.</h4>
+        <p>Stundensatz, Anfahrt, Ausfall&shy;regelung — einsehbar auf unserer Website. Keine Überraschungen.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot" style="color: rgba(29,29,29,0.55);">
+    <span>Kapitel 06 · Selbst&shy;verpflichtung</span>
+    <span class="pg">13 · 14</span>
+  </div>
+</section>
+
+<!-- ═══════════ 14 · CTA ═══════════ -->
+<section class="slide s-cta" data-label="Kontakt">
+  <div class="l">
+    <div>
+      <span class="tag mint"><span class="dot"></span>Danke &middot; Fragen &middot; Weiter&shy;machen</span>
+      <h2 style="margin-top: 32px;">Reden wir <em>weiter</em>.</h2>
+      <p class="sub">Die erste Beratung ist kostenlos. Der Anruf dauert meistens fünfzehn Minuten. Manchmal auch eine Stunde. Beides ist in Ordnung.</p>
+    </div>
+    <div class="contact">
+      <div class="card">
+        <div class="lbl">Telefon</div>
+        <b>030 · 499 87 620</b>
+        <span>Mo–Fr · 09–17 Uhr</span>
+      </div>
+      <div class="card">
+        <div class="lbl">E-Mail</div>
+        <b>hallo@allefarben-<br>alltagshilfe.de</b>
+        <span>Antwort innerhalb 1 Werktag</span>
+      </div>
+      <div class="card">
+        <div class="lbl">Beratungsraum</div>
+        <b>Goethestr. 58</b>
+        <span>10625 Berlin-Charlottenburg</span>
+      </div>
+      <div class="card">
+        <div class="lbl">Web</div>
+        <b>allefarben-<br>alltagshilfe.de</b>
+        <span>Preise · Leistungen · Team</span>
+      </div>
+    </div>
+  </div>
+  <div class="r">
+    <img src="img/photo-03.jpg" alt="Beratungsraum AlleFarben">
+    <div class="thank">Danke.</div>
+  </div>
+</section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+</body>
+</html>

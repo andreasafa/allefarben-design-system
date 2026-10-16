@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Neutrals" subtitle="Warm cream backgrounds — never pure white" viewport="700x230" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Neutrals</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .neutrals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .neutrals .swatch { height: 80px; border: 1px solid var(--border); }
+  .text-row { display: flex; gap: 20px; align-items: baseline; padding-top: 4px; }
+  .text-sample { font-family: var(--font-body); }
+  .text-sample .word { font-size: 18px; font-weight: 600; }
+  .text-sample .meta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-subtle); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Backgrounds — never pure white</div>
+  <div class="neutrals">
+    <div class="swatch dark-text" style="background:#fffaf6"><div class="hex">#FFFAF6</div><div class="name">bg</div></div>
+    <div class="swatch dark-text" style="background:#fef3e8"><div class="hex">#FEF3E8</div><div class="name">bg-alt</div></div>
+    <div class="swatch dark-text" style="background:#f7ede2"><div class="hex">#F7EDE2</div><div class="name">bg-sunken</div></div>
+    <div class="swatch dark-text" style="background:#fffdfa"><div class="hex">#FFFDFA</div><div class="name">surface</div></div>
+  </div>
+  <div class="text-row">
+    <div class="text-sample"><div class="word" style="color:#1d1d1d">Primärtext Aa</div><div class="meta">#1D1D1D · fg</div></div>
+    <div class="text-sample"><div class="word" style="color:#4a4846">Sekundär Aa</div><div class="meta">#4A4846 · fg-muted</div></div>
+    <div class="text-sample"><div class="word" style="color:#7a736c">Tertiär Aa</div><div class="meta">#7A736C · fg-subtle</div></div>
+  </div>
+</div>
+</body>
+</html>

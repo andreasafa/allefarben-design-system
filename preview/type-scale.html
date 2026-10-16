@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Type Scale" subtitle="Display → micro, with token labels" viewport="700x320" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Type Scale</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .scale { display: flex; flex-direction: column; gap: 6px; }
+  .line { display: flex; align-items: baseline; gap: 16px; font-family: var(--font-display); font-weight: 700; color: #1d1d1d; letter-spacing: -0.01em; line-height: 1.1; }
+  .line .meta { font-family: var(--font-body); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-subtle); width: 64px; text-align: right; flex-shrink: 0; }
+  .body { font-family: var(--font-body); font-weight: 400; letter-spacing: 0; line-height: 1.55; color: #1d1d1d; }
+  .caps { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-muted); line-height: 1.2; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="scale">
+    <div class="line"><span class="meta">72 · h0</span><span style="font-size:42px">Vielfalt l(i)eben</span></div>
+    <div class="line"><span class="meta">48 · h1</span><span style="font-size:30px">Alltagshilfe für alle</span></div>
+    <div class="line"><span class="meta">36 · h2</span><span style="font-size:24px">Unser Team</span></div>
+    <div class="line"><span class="meta">28 · h3</span><span style="font-size:20px">Haushalt & Begleitung</span></div>
+    <div class="line"><span class="meta">22 · h4</span><span style="font-size:17px">Termin buchen</span></div>
+    <div class="line"><span class="meta">20 · lead</span><span class="body" style="font-size:16px">Du sagst, was du brauchst.</span></div>
+    <div class="line"><span class="meta">17 · body</span><span class="body" style="font-size:14px">Queere Alltagshilfe in Berlin.</span></div>
+    <div class="line"><span class="meta">13 · over</span><span class="caps" style="font-size:11px">Eyebrow label</span></div>
+  </div>
+</div>
+</body>
+</html>

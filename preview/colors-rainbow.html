@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Rainbow Palette" subtitle="6 pastel figures + full gradient — central brand motif" viewport="700x260" -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Rainbow Palette</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  .rainbow {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  .rainbow .swatch { height: 96px; }
+  .gradient-bar {
+    height: 48px;
+    border-radius: 12px;
+    background: var(--gradient-rainbow);
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="rainbow">
+    <div class="swatch dark-text" style="background:#e39f9a">
+      <div class="hex">#E39F9A</div><div class="name">brand-red</div>
+    </div>
+    <div class="swatch dark-text" style="background:#f4b896">
+      <div class="hex">#F4B896</div><div class="name">brand-peach</div>
+    </div>
+    <div class="swatch dark-text" style="background:#ffe28d">
+      <div class="hex">#FFE28D</div><div class="name">brand-yellow</div>
+    </div>
+    <div class="swatch dark-text" style="background:#98d7c2">
+      <div class="hex">#98D7C2</div><div class="name">brand-mint</div>
+    </div>
+    <div class="swatch dark-text" style="background:#78a5dc">
+      <div class="hex">#78A5DC</div><div class="name">brand-blue</div>
+    </div>
+    <div class="swatch dark-text" style="background:#b89bca">
+      <div class="hex">#B89BCA</div><div class="name">brand-lavender</div>
+    </div>
+  </div>
+  <div class="gradient-bar"></div>
+  <div class="label" style="text-align:center">The Rainbow — 6-stop pastel gradient, central brand motif</div>
+</div>
+</body>
+</html>
